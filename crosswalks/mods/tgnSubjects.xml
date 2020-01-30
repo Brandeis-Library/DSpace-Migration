@@ -1,0 +1,636 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<records xmlns:mods="http://www.loc.gov/mods/v3"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <record Subject_ID="tgn:7013266">
+        <mods:subject authority="tgn" authorityURI="http://vocab.getty.edu/tgn/"
+            valueURI="http://vocab.getty.edu/tgn/7013266">
+            <mods:hierarchicalGeographic>
+                <mods:city>Albany</mods:city>
+                <mods:county>Albany</mods:county>
+                <mods:state>New York</mods:state>
+                <mods:country>United States</mods:country>
+                <mods:continent>North and Central America</mods:continent>
+            </mods:hierarchicalGeographic>
+            <mods:cartographics>
+                <mods:coordinates>42.6525793, -73.7562317</mods:coordinates>
+            </mods:cartographics>
+        </mods:subject>
+    </record>
+    <record Subject_ID="tgn:7013445">
+        <mods:subject authority="tgn" authorityURI="http://vocab.getty.edu/tgn/"
+            valueURI="http://vocab.getty.edu/tgn/7013445">
+            <mods:hierarchicalGeographic>
+                <mods:city>Boston</mods:city>
+                <mods:county>Suffolk</mods:county>
+                <mods:state>Massachusetts</mods:state>
+                <mods:country>United States</mods:country>
+                <mods:continent>North and Central America</mods:continent>
+            </mods:hierarchicalGeographic>
+            <mods:cartographics>
+                <mods:coordinates>42.3584308, -71.0597732</mods:coordinates>
+            </mods:cartographics>
+        </mods:subject>
+    </record>
+    <record Subject_ID="tgn:7013453">
+        <mods:subject authority="tgn" authorityURI="http://vocab.getty.edu/tgn/"
+            valueURI="http://vocab.getty.edu/tgn/7013453">
+            <mods:hierarchicalGeographic>
+                <mods:city>Bridgeport</mods:city>
+                <mods:county>Fairfield</mods:county>
+                <mods:state>Connecticut</mods:state>
+                <mods:country>United States</mods:country>
+                <mods:continent>North and Central America</mods:continent>
+            </mods:hierarchicalGeographic>
+            <mods:cartographics>
+                <mods:coordinates>41.1670412, -73.2048348</mods:coordinates>
+            </mods:cartographics>
+        </mods:subject>
+    </record>
+    <record Subject_ID="tgn:2016650">
+        <mods:subject authority="tgn" authorityURI="http://vocab.getty.edu/tgn/"
+            valueURI="http://vocab.getty.edu/tgn/2016650">
+            <mods:hierarchicalGeographic>
+                <mods:city>Bristol</mods:city>
+                <mods:county>Hartford</mods:county>
+                <mods:state>Connecticut</mods:state>
+                <mods:country>United States</mods:country>
+                <mods:continent>North and Central America</mods:continent>
+            </mods:hierarchicalGeographic>
+            <mods:cartographics>
+                <mods:coordinates>41.6717648, -72.9492703</mods:coordinates>
+            </mods:cartographics>
+        </mods:subject>
+    </record>
+    <record Subject_ID="tgn:2049522">
+        <mods:subject authority="tgn" authorityURI="http://vocab.getty.edu/tgn/"
+            valueURI="http://vocab.getty.edu/tgn/2049522">
+            <mods:hierarchicalGeographic>
+                <mods:citySection>Campello</mods:citySection>
+                <mods:city>Brockton</mods:city>
+                <mods:county>Plymouth</mods:county>
+                <mods:state>Massachusetts</mods:state>
+                <mods:country>United States</mods:country>
+                <mods:continent>North and Central America</mods:continent>
+            </mods:hierarchicalGeographic>
+            <mods:cartographics>
+                <mods:coordinates>42.0834335, -71.0183787</mods:coordinates>
+            </mods:cartographics>
+        </mods:subject>
+    </record>
+    <record Subject_ID="tgn:2049525">
+        <mods:subject authority="tgn" authorityURI="http://vocab.getty.edu/tgn/"
+            valueURI="http://vocab.getty.edu/tgn/2049525">
+            <mods:hierarchicalGeographic>
+                <mods:city>Brookfield</mods:city>
+                <mods:county>Worcester</mods:county>
+                <mods:state>Massachusetts</mods:state>
+                <mods:country>United States</mods:country>
+                <mods:continent>North and Central America</mods:continent>
+            </mods:hierarchicalGeographic>
+            <mods:cartographics>
+                <mods:coordinates>42.2139817, -72.1022991</mods:coordinates>
+            </mods:cartographics>
+        </mods:subject>
+    </record>
+    <record Subject_ID="tgn:7015012">
+        <mods:subject authority="tgn" authorityURI="http://vocab.getty.edu/tgn/"
+            valueURI="http://vocab.getty.edu/tgn/7015012">
+            <mods:hierarchicalGeographic>
+                <mods:city>Chelsea</mods:city>
+                <mods:county>Suffolk</mods:county>
+                <mods:state>Massachusetts</mods:state>
+                <mods:country>United States</mods:country>
+                <mods:continent>North and Central America</mods:continent>
+            </mods:hierarchicalGeographic>
+            <mods:cartographics>
+                <mods:coordinates>42.3917638, -71.0328284</mods:coordinates>
+            </mods:cartographics>
+        </mods:subject>
+    </record>
+    <record Subject_ID="tgn:7013596">
+        <mods:subject authority="tgn" authorityURI="http://vocab.getty.edu/tgn/"
+            valueURI="http://vocab.getty.edu/tgn/7013596">
+            <mods:hierarchicalGeographic>
+                <mods:city>Chicago</mods:city>
+                <mods:county>Cook</mods:county>
+                <mods:state>Illinois</mods:state>
+                <mods:country>United States</mods:country>
+                <mods:continent>North and Central America</mods:continent>
+            </mods:hierarchicalGeographic>
+            <mods:cartographics>
+                <mods:coordinates>41.850033, -87.6500523</mods:coordinates>
+            </mods:cartographics>
+        </mods:subject>
+    </record>
+    <record Subject_ID="tgn:7013647">
+        <mods:subject authority="tgn" authorityURI="http://vocab.getty.edu/tgn/"
+            valueURI="http://vocab.getty.edu/tgn/7013647">
+            <mods:hierarchicalGeographic>
+                <mods:city>Concord</mods:city>
+                <mods:county>Merrimack</mods:county>
+                <mods:state>New Hampshire</mods:state>
+                <mods:country>United States</mods:country>
+                <mods:continent>North and Central America</mods:continent>
+            </mods:hierarchicalGeographic>
+            <mods:cartographics>
+                <mods:coordinates>43.2081366, -71.5375718</mods:coordinates>
+            </mods:cartographics>
+        </mods:subject>
+    </record>
+    <record Subject_ID="tgn:2016748">
+        <mods:subject authority="tgn" authorityURI="http://vocab.getty.edu/tgn/"
+            valueURI="http://vocab.getty.edu/tgn/2016748">
+            <mods:hierarchicalGeographic>
+                <mods:city>Danbury</mods:city>
+                <mods:county>Fairfield</mods:county>
+                <mods:state>Connecticut</mods:state>
+                <mods:country>United States</mods:country>
+                <mods:continent>North and Central America</mods:continent>
+            </mods:hierarchicalGeographic>
+            <mods:cartographics>
+                <mods:coordinates>41.394817, -73.4540111</mods:coordinates>
+            </mods:cartographics>
+        </mods:subject>
+    </record>
+    <record Subject_ID="tgn:7013763">
+        <mods:subject authority="tgn" authorityURI="http://vocab.getty.edu/tgn/"
+            valueURI="http://vocab.getty.edu/tgn/7013763">
+            <mods:hierarchicalGeographic>
+                <mods:city>Fitchburg</mods:city>
+                <mods:county>Worcester</mods:county>
+                <mods:state>Massachusetts</mods:state>
+                <mods:country>United States</mods:country>
+                <mods:continent>North and Central America</mods:continent>
+            </mods:hierarchicalGeographic>
+            <mods:cartographics>
+                <mods:coordinates>42.5834228, -71.8022956</mods:coordinates>
+            </mods:cartographics>
+        </mods:subject>
+    </record>
+    <record Subject_ID="tgn:7013695">
+        <mods:subject authority="tgn" authorityURI="http://vocab.getty.edu/tgn/"
+            valueURI="http://vocab.getty.edu/tgn/7013695">
+            <mods:hierarchicalGeographic>
+                <mods:city>Hartford</mods:city>
+                <mods:county>Hartford</mods:county>
+                <mods:state>Connecticut</mods:state>
+                <mods:country>United States</mods:country>
+                <mods:continent>North and Central America</mods:continent>
+            </mods:hierarchicalGeographic>
+            <mods:cartographics>
+                <mods:coordinates>41.7637111, -72.6850932</mods:coordinates>
+            </mods:cartographics>
+        </mods:subject>
+    </record>
+    <record Subject_ID="tgn:2049885">
+        <mods:subject authority="tgn" authorityURI="http://vocab.getty.edu/tgn/"
+            valueURI="http://vocab.getty.edu/tgn/2049885">
+            <mods:hierarchicalGeographic>
+                <mods:city>Haverhill</mods:city>
+                <mods:county>Essex</mods:county>
+                <mods:state>Massachusetts</mods:state>
+                <mods:country>United States</mods:country>
+                <mods:continent>North and Central America</mods:continent>
+            </mods:hierarchicalGeographic>
+            <mods:cartographics>
+                <mods:coordinates>42.7762015, -71.0772796</mods:coordinates>
+            </mods:cartographics>
+        </mods:subject>
+    </record>
+    <record Subject_ID="tgn:2049911">
+        <mods:subject authority="tgn" authorityURI="http://vocab.getty.edu/tgn/"
+            valueURI="http://vocab.getty.edu/tgn/2049911">
+            <mods:hierarchicalGeographic>
+                <mods:city>Holbrook</mods:city>
+                <mods:county>Norfolk county</mods:county>
+                <mods:state>Massachusetts</mods:state>
+                <mods:country>United States</mods:country>
+                <mods:continent>North and Central America</mods:continent>
+            </mods:hierarchicalGeographic>
+            <mods:cartographics>
+                <mods:coordinates>42.1550999, -71.0086576</mods:coordinates>
+            </mods:cartographics>
+        </mods:subject>
+    </record>
+    <record Subject_ID="tgn:2049964">
+        <mods:subject authority="tgn" authorityURI="http://vocab.getty.edu/tgn/"
+            valueURI="http://vocab.getty.edu/tgn/2049964">
+            <mods:hierarchicalGeographic>
+                <mods:city>Ipswich</mods:city>
+                <mods:county>Essex</mods:county>
+                <mods:state>Massachusetts</mods:state>
+                <mods:country>United States</mods:country>
+                <mods:continent>North and Central America</mods:continent>
+            </mods:hierarchicalGeographic>
+            <mods:cartographics>
+                <mods:coordinates>42.6792602, -70.8411612</mods:coordinates>
+            </mods:cartographics>
+        </mods:subject>
+    </record>
+    <record Subject_ID="tgn:7013803">
+        <mods:subject authority="tgn" authorityURI="http://vocab.getty.edu/tgn/"
+            valueURI="http://vocab.getty.edu/tgn/7013803">
+            <mods:hierarchicalGeographic>
+                <mods:city>Ithaca</mods:city>
+                <mods:county>Tompkins</mods:county>
+                <mods:state>New York</mods:state>
+                <mods:country>United States</mods:country>
+                <mods:continent>North and Central America</mods:continent>
+            </mods:hierarchicalGeographic>
+            <mods:cartographics>
+                <mods:coordinates>42.4406284, -76.4966071</mods:coordinates>
+            </mods:cartographics>
+        </mods:subject>
+    </record>
+    <record Subject_ID="tgn:7013885">
+        <mods:subject authority="tgn" authorityURI="http://vocab.getty.edu/tgn/"
+            valueURI="http://vocab.getty.edu/tgn/7013885">
+            <mods:hierarchicalGeographic>
+                <mods:city>Lewiston</mods:city>
+                <mods:county>Androscoggin</mods:county>
+                <mods:state>Maine</mods:state>
+                <mods:country>United States</mods:country>
+                <mods:continent>North and Central America</mods:continent>
+            </mods:hierarchicalGeographic>
+            <mods:cartographics>
+                <mods:coordinates>44.100351, -70.2147764</mods:coordinates>
+            </mods:cartographics>
+        </mods:subject>
+    </record>
+    <record Subject_ID="tgn:2017083">
+        <mods:subject authority="tgn" authorityURI="http://vocab.getty.edu/tgn/"
+            valueURI="http://vocab.getty.edu/tgn/2017083">
+            <mods:hierarchicalGeographic>
+                <mods:city>Meriden</mods:city>
+                <mods:county>New Haven</mods:county>
+                <mods:state>Connecticut</mods:state>
+                <mods:country>United States</mods:country>
+                <mods:continent>North and Central America</mods:continent>
+            </mods:hierarchicalGeographic>
+            <mods:cartographics>
+                <mods:coordinates>41.5381535, -72.8070435</mods:coordinates>
+            </mods:cartographics>
+        </mods:subject>
+    </record>
+    <record Subject_ID="tgn:2050120">
+        <mods:subject authority="tgn" authorityURI="http://vocab.getty.edu/tgn/"
+            valueURI="http://vocab.getty.edu/tgn/2050120">
+            <mods:hierarchicalGeographic>
+                <mods:city>Middleboro</mods:city>
+                <mods:county>Plymouth</mods:county>
+                <mods:state>Massachusetts</mods:state>
+                <mods:country>United States</mods:country>
+                <mods:continent>North and Central America</mods:continent>
+            </mods:hierarchicalGeographic>
+            <mods:cartographics>
+                <mods:coordinates>41.8931576, -70.9111517</mods:coordinates>
+            </mods:cartographics>
+        </mods:subject>
+    </record>
+    <record Subject_ID="tgn:7013956">
+        <mods:subject authority="tgn" authorityURI="http://vocab.getty.edu/tgn/"
+            valueURI="http://vocab.getty.edu/tgn/7013956">
+            <mods:hierarchicalGeographic>
+                <mods:city>Montpelier</mods:city>
+                <mods:county>Washington</mods:county>
+                <mods:state>Vermont</mods:state>
+                <mods:country>United States</mods:country>
+                <mods:continent>North and Central America</mods:continent>
+            </mods:hierarchicalGeographic>
+            <mods:cartographics>
+                <mods:coordinates>44.2600593, -72.5753869</mods:coordinates>
+            </mods:cartographics>
+        </mods:subject>
+    </record>
+    <record Subject_ID="tgn:2059801">
+        <mods:subject authority="tgn" authorityURI="http://vocab.getty.edu/tgn/"
+            valueURI="http://vocab.getty.edu/tgn/2059801">
+            <mods:hierarchicalGeographic>
+                <mods:city>Mound City</mods:city>
+                <mods:county>Holt</mods:county>
+                <mods:state>Missouri</mods:state>
+                <mods:country>United States</mods:country>
+                <mods:continent>North and Central America</mods:continent>
+            </mods:hierarchicalGeographic>
+            <mods:cartographics>
+                <mods:coordinates>40.1311066, -95.2316428</mods:coordinates>
+            </mods:cartographics>
+        </mods:subject>
+    </record>
+    <record Subject_ID="tgn:7014196">
+        <mods:subject authority="tgn" authorityURI="http://vocab.getty.edu/tgn/"
+            valueURI="http://vocab.getty.edu/tgn/7014196">
+            <mods:hierarchicalGeographic>
+                <mods:city>New Bedford</mods:city>
+                <mods:county>Bristol</mods:county>
+                <mods:state>Massachusetts</mods:state>
+                <mods:country>United States</mods:country>
+                <mods:continent>North and Central America</mods:continent>
+            </mods:hierarchicalGeographic>
+            <mods:cartographics>
+                <mods:coordinates>41.6362152, -70.934205</mods:coordinates>
+            </mods:cartographics>
+        </mods:subject>
+    </record>
+    <record Subject_ID="tgn:7014210">
+        <mods:subject authority="tgn" authorityURI="http://vocab.getty.edu/tgn/"
+            valueURI="http://vocab.getty.edu/tgn/7014210">
+            <mods:hierarchicalGeographic>
+                <mods:city>New Haven</mods:city>
+                <mods:county>New Haven</mods:county>
+                <mods:state>Connecticut</mods:state>
+                <mods:country>United States</mods:country>
+                <mods:continent>North and Central America</mods:continent>
+            </mods:hierarchicalGeographic>
+            <mods:cartographics>
+                <mods:coordinates>41.3081527, -72.9281578</mods:coordinates>
+            </mods:cartographics>
+        </mods:subject>
+    </record>
+    <record Subject_ID="tgn:7015822">
+        <mods:subject authority="tgn" authorityURI="http://vocab.getty.edu/tgn/"
+            valueURI="http://vocab.getty.edu/tgn/7015822">
+            <mods:hierarchicalGeographic>
+                <mods:citySection>Brooklyn</mods:citySection>
+                <mods:city>New York</mods:city>
+                <mods:county/>
+                <mods:state>New York</mods:state>
+                <mods:country>United States</mods:country>
+                <mods:continent>North and Central America</mods:continent>
+            </mods:hierarchicalGeographic>
+            <mods:cartographics>
+                <mods:coordinates>40.7053804, -73.9962504</mods:coordinates>
+            </mods:cartographics>
+        </mods:subject>
+    </record>
+    <record Subject_ID="tgn:7007567">
+        <mods:subject authority="tgn" authorityURI="http://vocab.getty.edu/tgn/"
+            valueURI="http://vocab.getty.edu/tgn/7007567">
+            <mods:hierarchicalGeographic>
+                <mods:city>New York</mods:city>
+                <mods:county/>
+                <mods:state>New York</mods:state>
+                <mods:country>United States</mods:country>
+                <mods:continent>North and Central America</mods:continent>
+            </mods:hierarchicalGeographic>
+            <mods:cartographics>
+                <mods:coordinates>40.7142691, -74.0059729</mods:coordinates>
+            </mods:cartographics>
+        </mods:subject>
+    </record>
+    <record Subject_ID="tgn:7014220">
+        <mods:subject authority="tgn" authorityURI="http://vocab.getty.edu/tgn/"
+            valueURI="http://vocab.getty.edu/tgn/7014220">
+            <mods:hierarchicalGeographic>
+                <mods:city>Newburyport</mods:city>
+                <mods:county>Essex</mods:county>
+                <mods:state>Massachusetts</mods:state>
+                <mods:country>United States</mods:country>
+                <mods:continent>North and Central America</mods:continent>
+            </mods:hierarchicalGeographic>
+            <mods:cartographics>
+                <mods:coordinates>42.8125913, -70.8772751</mods:coordinates>
+            </mods:cartographics>
+        </mods:subject>
+    </record>
+    <record Subject_ID="tgn:2050251">
+        <mods:subject authority="tgn" authorityURI="http://vocab.getty.edu/tgn/"
+            valueURI="http://vocab.getty.edu/tgn/2050251">
+            <mods:hierarchicalGeographic>
+                <mods:city>North Attleboro</mods:city>
+                <mods:county>Bristol</mods:county>
+                <mods:state>Massachusetts</mods:state>
+                <mods:country>United States</mods:country>
+                <mods:continent>North and Central America</mods:continent>
+            </mods:hierarchicalGeographic>
+            <mods:cartographics>
+                <mods:coordinates>41.9834324, -71.3328328</mods:coordinates>
+            </mods:cartographics>
+        </mods:subject>
+    </record>
+    <record Subject_ID="tgn:7014246">
+        <mods:subject authority="tgn" authorityURI="http://vocab.getty.edu/tgn/"
+            valueURI="http://vocab.getty.edu/tgn/7014246">
+            <mods:hierarchicalGeographic>
+                <mods:city>Norwich</mods:city>
+                <mods:county>New London</mods:county>
+                <mods:state>Connecticut</mods:state>
+                <mods:country>United States</mods:country>
+                <mods:continent>North and Central America</mods:continent>
+            </mods:hierarchicalGeographic>
+            <mods:cartographics>
+                <mods:coordinates>41.5242649, -72.0759105</mods:coordinates>
+            </mods:cartographics>
+        </mods:subject>
+    </record>
+    <record Subject_ID="tgn:7014288">
+        <mods:subject authority="tgn" authorityURI="http://vocab.getty.edu/tgn/"
+            valueURI="http://vocab.getty.edu/tgn/7014288">
+            <mods:hierarchicalGeographic>
+                <mods:city>Oneida</mods:city>
+                <mods:county>Madison</mods:county>
+                <mods:state>New York</mods:state>
+                <mods:country>United States</mods:country>
+                <mods:continent>North and Central America</mods:continent>
+            </mods:hierarchicalGeographic>
+            <mods:cartographics>
+                <mods:coordinates>43.0925684, -75.6512931</mods:coordinates>
+            </mods:cartographics>
+        </mods:subject>
+    </record>
+    <record Subject_ID="tgn:7014406">
+        <mods:subject authority="tgn" authorityURI="http://vocab.getty.edu/tgn/"
+            valueURI="http://vocab.getty.edu/tgn/7014406">
+            <mods:hierarchicalGeographic>
+                <mods:city>Philadelphia</mods:city>
+                <mods:county>Philadelphia</mods:county>
+                <mods:state>Pennsylvania</mods:state>
+                <mods:country>United States</mods:country>
+                <mods:continent>North and Central America</mods:continent>
+            </mods:hierarchicalGeographic>
+            <mods:cartographics>
+                <mods:coordinates>39.952335, -75.163789</mods:coordinates>
+            </mods:cartographics>
+        </mods:subject>
+    </record>
+    <record Subject_ID="tgn:7014421">
+        <mods:subject authority="tgn" authorityURI="http://vocab.getty.edu/tgn/"
+            valueURI="http://vocab.getty.edu/tgn/7014421">
+            <mods:hierarchicalGeographic>
+                <mods:city>Plymouth</mods:city>
+                <mods:county>Plymouth</mods:county>
+                <mods:state>Massachusetts</mods:state>
+                <mods:country>United States</mods:country>
+                <mods:continent>North and Central America</mods:continent>
+            </mods:hierarchicalGeographic>
+            <mods:cartographics>
+                <mods:coordinates>41.9584367, -70.6672577</mods:coordinates>
+            </mods:cartographics>
+        </mods:subject>
+    </record>
+    <record Subject_ID="tgn:7014275">
+        <mods:subject authority="tgn" authorityURI="http://vocab.getty.edu/tgn/"
+            valueURI="http://vocab.getty.edu/tgn/7014275">
+            <mods:hierarchicalGeographic>
+                <mods:city>Portsmouth</mods:city>
+                <mods:county>Rockingham</mods:county>
+                <mods:state>New Hampshire</mods:state>
+                <mods:country>United States</mods:country>
+                <mods:continent>North and Central America</mods:continent>
+            </mods:hierarchicalGeographic>
+            <mods:cartographics>
+                <mods:coordinates>43.0717552, -70.7625532</mods:coordinates>
+            </mods:cartographics>
+        </mods:subject>
+    </record>
+    <record Subject_ID="tgn:2063756">
+        <mods:subject authority="tgn" authorityURI="http://vocab.getty.edu/tgn/"
+            valueURI="http://vocab.getty.edu/tgn/2063756">
+            <mods:hierarchicalGeographic>
+                <mods:city>Rochester</mods:city>
+                <mods:county>Strafford</mods:county>
+                <mods:state>New Hampshire</mods:state>
+                <mods:country>United States</mods:country>
+                <mods:continent>North and Central America</mods:continent>
+            </mods:hierarchicalGeographic>
+            <mods:cartographics>
+                <mods:coordinates>43.3045261, -70.9756186</mods:coordinates>
+            </mods:cartographics>
+        </mods:subject>
+    </record>
+    <record Subject_ID="tgn:7014348">
+        <mods:subject authority="tgn" authorityURI="http://vocab.getty.edu/tgn/"
+            valueURI="http://vocab.getty.edu/tgn/7014348">
+            <mods:hierarchicalGeographic>
+                <mods:city>Rochester</mods:city>
+                <mods:county>Monroe</mods:county>
+                <mods:state>New York</mods:state>
+                <mods:country>United States</mods:country>
+                <mods:continent>North and Central America</mods:continent>
+            </mods:hierarchicalGeographic>
+            <mods:cartographics>
+                <mods:coordinates>43.1547845, -77.6155568</mods:coordinates>
+            </mods:cartographics>
+        </mods:subject>
+    </record>
+    <record Subject_ID="tgn:7015753">
+        <mods:subject authority="tgn" authorityURI="http://vocab.getty.edu/tgn/"
+            valueURI="http://vocab.getty.edu/tgn/7015753">
+            <mods:hierarchicalGeographic>
+                <mods:city>Rutland</mods:city>
+                <mods:county>Rutland</mods:county>
+                <mods:state>Vermont</mods:state>
+                <mods:country>United States</mods:country>
+                <mods:continent>North and Central America</mods:continent>
+            </mods:hierarchicalGeographic>
+            <mods:cartographics>
+                <mods:coordinates>43.6106237, -72.9726065</mods:coordinates>
+            </mods:cartographics>
+        </mods:subject>
+    </record>
+    <record Subject_ID="tgn:2050617">
+        <mods:subject authority="tgn" authorityURI="http://vocab.getty.edu/tgn/"
+            valueURI="http://vocab.getty.edu/tgn/2050617">
+            <mods:hierarchicalGeographic>
+                <mods:city>Southbridge</mods:city>
+                <mods:county>Worcester</mods:county>
+                <mods:state>Massachusetts</mods:state>
+                <mods:country>United States</mods:country>
+                <mods:continent>North and Central America</mods:continent>
+            </mods:hierarchicalGeographic>
+            <mods:cartographics>
+                <mods:coordinates>42.0750954, -72.0334084</mods:coordinates>
+            </mods:cartographics>
+        </mods:subject>
+    </record>
+    <record Subject_ID="tgn:7014531">
+        <mods:subject authority="tgn" authorityURI="http://vocab.getty.edu/tgn/"
+            valueURI="http://vocab.getty.edu/tgn/7014531">
+            <mods:hierarchicalGeographic>
+                <mods:city>Springfield</mods:city>
+                <mods:county>Hampden</mods:county>
+                <mods:state>Massachusetts</mods:state>
+                <mods:country>United States</mods:country>
+                <mods:continent>North and Central America</mods:continent>
+            </mods:hierarchicalGeographic>
+            <mods:cartographics>
+                <mods:coordinates>42.1014831, -72.589811</mods:coordinates>
+            </mods:cartographics>
+        </mods:subject>
+    </record>
+    <record Subject_ID="tgn:7014660">
+        <mods:subject authority="tgn" authorityURI="http://vocab.getty.edu/tgn/"
+            valueURI="http://vocab.getty.edu/tgn/7014660">
+            <mods:hierarchicalGeographic>
+                <mods:city>Troy</mods:city>
+                <mods:county>Rensselaer</mods:county>
+                <mods:state>New York</mods:state>
+                <mods:country>United States</mods:country>
+                <mods:continent>North and Central America</mods:continent>
+            </mods:hierarchicalGeographic>
+            <mods:cartographics>
+                <mods:coordinates>42.7284117, -73.6917851</mods:coordinates>
+            </mods:cartographics>
+        </mods:subject>
+    </record>
+    <record Subject_ID="tgn:2095130">
+        <mods:subject authority="tgn" authorityURI="http://vocab.getty.edu/tgn/"
+            valueURI="http://vocab.getty.edu/tgn/2095130">
+            <mods:hierarchicalGeographic>
+                <mods:city>Valley Falls</mods:city>
+                <mods:county>Providence</mods:county>
+                <mods:state>Rhode Island</mods:state>
+                <mods:country>United States</mods:country>
+                <mods:continent>North and Central America</mods:continent>
+            </mods:hierarchicalGeographic>
+            <mods:cartographics>
+                <mods:coordinates>41.9067663, -71.3906119</mods:coordinates>
+            </mods:cartographics>
+        </mods:subject>
+    </record>
+    <record Subject_ID="tgn:2095192">
+        <mods:subject authority="tgn" authorityURI="http://vocab.getty.edu/tgn/"
+            valueURI="http://vocab.getty.edu/tgn/2095192">
+            <mods:hierarchicalGeographic>
+                <mods:city>Westerly</mods:city>
+                <mods:county>Washington</mods:county>
+                <mods:state>Rhode Island</mods:state>
+                <mods:country>United States</mods:country>
+                <mods:continent>North and Central America</mods:continent>
+            </mods:hierarchicalGeographic>
+            <mods:cartographics>
+                <mods:coordinates>41.3775996, -71.8272911</mods:coordinates>
+            </mods:cartographics>
+        </mods:subject>
+    </record>
+    <record Subject_ID="tgn:7014632">
+        <mods:subject authority="tgn" authorityURI="http://vocab.getty.edu/tgn/"
+            valueURI="http://vocab.getty.edu/tgn/7014632">
+            <mods:hierarchicalGeographic>
+                <mods:city>Wilmington</mods:city>
+                <mods:county>New Castle</mods:county>
+                <mods:state>Delaware</mods:state>
+                <mods:country>United States</mods:country>
+                <mods:continent>North and Central America</mods:continent>
+            </mods:hierarchicalGeographic>
+            <mods:cartographics>
+                <mods:coordinates>39.7459467, -75.5465889</mods:coordinates>
+            </mods:cartographics>
+        </mods:subject>
+    </record>
+    <record Subject_ID="tgn:2095214">
+        <mods:subject authority="tgn" authorityURI="http://vocab.getty.edu/tgn/"
+            valueURI="http://vocab.getty.edu/tgn/2095214">
+            <mods:hierarchicalGeographic>
+                <mods:city>Woonsocket</mods:city>
+                <mods:county>Providence</mods:county>
+                <mods:state>Rhode Island</mods:state>
+                <mods:country>United States</mods:country>
+                <mods:continent>North and Central America</mods:continent>
+            </mods:hierarchicalGeographic>
+            <mods:cartographics>
+                <mods:coordinates>42.0028761, -71.5147839</mods:coordinates>
+            </mods:cartographics>
+        </mods:subject>
+    </record>
+</records>
