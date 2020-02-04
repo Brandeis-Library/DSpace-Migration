@@ -635,7 +635,7 @@
 	-->
 	<xsl:template match="doc:element[@name='note']">
 		<xsl:for-each select="doc:element">
-			<xsl:element name="note">
+			<xsl:element name="mods:note">
 				<xsl:attribute name="type">
 					<xsl:value-of select="@name"/>
 				</xsl:attribute>
