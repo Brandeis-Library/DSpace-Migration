@@ -192,23 +192,17 @@ Modified for DSpace -> ALMA-D
                                    </dc:identifier>
                               </xsl:for-each>
                          </xsl:when>
-                         <xsl:when test="@name='uri'">
-                              <xsl:element name="dc:identifier">
-                                   <xsl:attribute name="xsi:type">
-                                        <xsl:text>dcterms:URI</xsl:text>
-                                   </xsl:attribute>
-                                   <xsl:value-of select="doc:element/doc:field[@name='value']"/>
-                              </xsl:element>
-                         </xsl:when>
-                         <xsl:otherwise>
-                              <xsl:for-each select="doc:element/doc:field[@name='value']">
-                                   <dc:identifier>
-                                        <xsl:value-of select="."/>
-                                   </dc:identifier>
-                              </xsl:for-each>
-                         </xsl:otherwise>
                     </xsl:choose>
                </xsl:for-each>
+               <xsl:element name="dc:identifier">
+                    <xsl:value-of select="concat('hdl:',/doc:metadata/doc:element[@name='others']/doc:field[@name='handle'])"/>
+               </xsl:element>
+               <xsl:element name="dc:identifier">
+                    <xsl:attribute name="xsi:type">
+                         <xsl:text>dcterms:URI</xsl:text>
+                    </xsl:attribute>
+                    <xsl:value-of select="/doc:metadata/doc:element[@name='bundles']/doc:element[@name='bundle'][doc:field[text()='ORIGINAL']]/doc:element/doc:element[1]/doc:field[@name='url']"/>
+               </xsl:element>
                <!-- 
                dc.language
                -->
