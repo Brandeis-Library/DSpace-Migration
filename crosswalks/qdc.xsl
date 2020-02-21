@@ -67,6 +67,22 @@ Modified for DSpace -> ALMA-D
                     </dc:contributor>
                </xsl:for-each>
                <!-- 
+               dcterms:advisor
+               -->
+               <xsl:for-each select="doc:metadata/doc:element[@name='dc']/doc:element[@name='contributor']/doc:element[@name='advisor']/doc:element/doc:field[@name='value']">
+                    <dcterms:advisor>
+                         <xsl:value-of select="."/>
+                    </dcterms:advisor>
+               </xsl:for-each>
+               <!-- 
+               dcterms:department
+               -->
+               <xsl:for-each select="doc:metadata/doc:element[@name='dc']/doc:element[@name='contributor']/doc:element[@name='department']/doc:element/doc:field[@name='value']">
+                    <dcterms:department>
+                         <xsl:value-of select="."/>
+                    </dcterms:department>
+               </xsl:for-each>
+               <!-- 
                dc.subject.* 
                -->
                <xsl:for-each select="doc:metadata/doc:element[@name='dc']/doc:element[@name='subject']">
@@ -124,7 +140,7 @@ Modified for DSpace -> ALMA-D
                <xsl:for-each select="doc:metadata/doc:element[@name='dc']/doc:element[@name='description']/doc:element">
                     <xsl:choose>
                          <xsl:when test="@name='abstract'">
-                              <xsl:for-each select="doc:field[@name='value']">
+                              <xsl:for-each select="doc:element/doc:field[@name='value']">
                                    <dcterms:abstract>
                                         <xsl:value-of select="."/>
                                    </dcterms:abstract>
@@ -139,11 +155,21 @@ Modified for DSpace -> ALMA-D
                          </xsl:when>
                          <xsl:otherwise>
                               <dc:description>
-                                   <xsl:value-of select="doc:field[@name='value']"/>
+                                   <xsl:value-of select="doc:element/doc:field[@name='value']"/>
                               </dc:description>
                          </xsl:otherwise>
                     </xsl:choose>
                </xsl:for-each>
+               <!-- 
+               degree info for etds
+               -->
+               <xsl:if test="doc:metadata/doc:element[@name='dc']/doc:element[@name='type']/doc:element/doc:field[@name='value'] = 'Thesis'">
+                    <xsl:element name="dc:description">
+                         <xsl:value-of select="concat('Thesis: ',doc:metadata/doc:element[@name='dc']/doc:element[@name='degree']/doc:element[@name='name']/doc:element/doc:field)"/>
+                         <xsl:value-of select="concat('., Brandeis University, ',doc:metadata/doc:element[@name='dc']/doc:element[@name='contributor']/doc:element[@name='department']/doc:element/doc:field[@name='value'])"/>
+                         <xsl:value-of select="concat(', ', doc:metadata/doc:element[@name='dc']/doc:element[@name='date']/doc:element[@name='issued']/doc:element/doc:field[@name='value'])"/>
+                    </xsl:element>
+               </xsl:if>
                <!-- 
                dc.date
                -->
@@ -228,21 +254,21 @@ Modified for DSpace -> ALMA-D
                <xsl:for-each select="doc:metadata/doc:element[@name='dc']/doc:element[@name='relation']/doc:element">
                     <xsl:choose>
                          <xsl:when test="@name='ispartof'">
-                              <xsl:for-each select="doc:field[@name='value']">
+                              <xsl:for-each select="doc:element/doc:field[@name='value']">
                                    <dcterms:ispartof>
                                         <xsl:value-of select="."/>
                                    </dcterms:ispartof>
                               </xsl:for-each>
                          </xsl:when>
                          <xsl:when test="@name='ispartofseries'">
-                              <xsl:for-each select="doc:field[@name='value']">
+                              <xsl:for-each select="doc:element/doc:field[@name='value']">
                                    <dcterms:ispartofseries>
                                         <xsl:value-of select="."/>
                                    </dcterms:ispartofseries>
                               </xsl:for-each>
                          </xsl:when>
                          <xsl:when test="@name='isreferencedby'">
-                              <xsl:for-each select="doc:field[@name='value']">
+                              <xsl:for-each select="doc:element/doc:field[@name='value']">
                                    <dcterms:isreferencedby>
                                         <xsl:value-of select="."/>
                                    </dcterms:isreferencedby>
