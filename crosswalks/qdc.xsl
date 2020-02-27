@@ -153,6 +153,7 @@ Modified for DSpace -> ALMA-D
                                    </dcterms:provenance>
                               </xsl:for-each>
                          </xsl:when>
+                         <xsl:when test="@name='sponsorship'"/>
                          <xsl:otherwise>
                               <dc:description>
                                    <xsl:value-of select="doc:element/doc:field[@name='value']"/>
@@ -164,10 +165,17 @@ Modified for DSpace -> ALMA-D
                degree info for etds
                -->
                <xsl:if test="doc:metadata/doc:element[@name='dc']/doc:element[@name='type']/doc:element/doc:field[@name='value'] = 'Thesis'">
-                    <xsl:element name="dc:description">
-                         <xsl:value-of select="concat('Thesis: ',doc:metadata/doc:element[@name='dc']/doc:element[@name='degree']/doc:element[@name='name']/doc:element/doc:field)"/>
-                         <xsl:value-of select="concat('., Brandeis University, ',doc:metadata/doc:element[@name='dc']/doc:element[@name='contributor']/doc:element[@name='department']/doc:element/doc:field[@name='value'])"/>
-                         <xsl:value-of select="concat(', ', doc:metadata/doc:element[@name='dc']/doc:element[@name='date']/doc:element[@name='issued']/doc:element/doc:field[@name='value'])"/>
+                    <xsl:element name="dcterms:name">
+                         <xsl:value-of select="doc:metadata/doc:element[@name='dc']/doc:element[@name='degree']/doc:element[@name='name']/doc:element/doc:field"/>
+                    </xsl:element>
+                    <xsl:element name="dcterms:level">
+                         <xsl:value-of select="doc:metadata/doc:element[@name='dc']/doc:element[@name='degree']/doc:element[@name='level']/doc:element/doc:field"/>
+                    </xsl:element>
+                    <xsl:element name="dcterms:grantor">
+                         <xsl:value-of select="doc:metadata/doc:element[@name='dc']/doc:element[@name='degree']/doc:element[@name='grantor']/doc:element/doc:field"/>
+                    </xsl:element>
+                    <xsl:element name="dcterms:discipline">
+                         <xsl:value-of select="doc:metadata/doc:element[@name='dc']/doc:element[@name='degree']/doc:element[@name='discipline']/doc:element/doc:field"/>
                     </xsl:element>
                </xsl:if>
                <!-- 
