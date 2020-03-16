@@ -355,7 +355,7 @@ Modified for DSpace -> ALMA-D
                                    <xsl:value-of select="doc:element/doc:field[@name='value']"/>
                               </dcterms:extent>
                          </xsl:when>
-                         <xsl:when test="doc:element[@name='medium']">
+                         <xsl:when test="@name='medium'">
                               <dcterms:medium>
                                    <xsl:value-of select="doc:element/doc:field[@name='value']"/>
                               </dcterms:medium>
