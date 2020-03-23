@@ -283,12 +283,12 @@
 								<xsl:attribute name="valueURI">http://id.loc.gov/vocabulary/relators/ive</xsl:attribute>
 								<xsl:text>Interviewee</xsl:text>
 							</xsl:element>
-							<xsl:for-each select="doc:element/doc:field">
-								<xsl:element name="mods:namePart">
-									<xsl:value-of select="."/>
-								</xsl:element>
-							</xsl:for-each>
 						</xsl:element>
+						<xsl:for-each select="doc:element/doc:field">
+							<xsl:element name="mods:namePart">
+								<xsl:value-of select="."/>
+							</xsl:element>
+						</xsl:for-each>
 					</xsl:element>
 				</xsl:when>
 				<xsl:when test="@name='interviewer'">
@@ -302,12 +302,12 @@
 								<xsl:attribute name="valueURI">http://id.loc.gov/vocabulary/relators/ivr</xsl:attribute>
 								<xsl:text>Interviewer</xsl:text>
 							</xsl:element>
-							<xsl:for-each select="doc:element/doc:field">
-								<xsl:element name="mods:namePart">
-									<xsl:value-of select="."/>
-								</xsl:element>
-							</xsl:for-each>
 						</xsl:element>
+						<xsl:for-each select="doc:element/doc:field">
+							<xsl:element name="mods:namePart">
+								<xsl:value-of select="."/>
+							</xsl:element>
+						</xsl:for-each>						
 					</xsl:element>
 				</xsl:when>
 			</xsl:choose>
