@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" 
 	xmlns:doc="http://www.lyncode.com/xoai" version="1.0"
-	xmlns:mods="http://www.loc.gov/mods/v3" 
+	xmlns="http://www.loc.gov/mods/v3" 
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" exclude-result-prefixes="doc" 
 	xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-7.xsd">
 	<xsl:variable name="tgnLookup" select="document('tgnSubjects.xml')"/>
