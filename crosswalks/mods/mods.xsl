@@ -599,7 +599,7 @@
 				<xsl:attribute name="authority">iso639-2b</xsl:attribute>
 				<xsl:attribute name="authorityURI">http://id.loc.gov/vocabulary/iso639-2</xsl:attribute>
 				<xsl:attribute name="type">code</xsl:attribute>
-				<xsl:value-of select="normalize-space(substring-after(.,'|'))"/>				</xsl:element>
+				<xsl:value-of select="normalize-space(substring-after(.,'|'))"/>
 			</xsl:element>
 		</xsl:element>
 	</xsl:template>
