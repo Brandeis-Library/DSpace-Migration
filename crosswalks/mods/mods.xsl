@@ -8,9 +8,9 @@
 	<xsl:output omit-xml-declaration="yes" method="xml" indent="yes"/>
 	<xsl:strip-space elements="*"/>
 	<xsl:template match="/">
-		<mods:mods>
+		<mods>
 			<!-- 
-				mods:titleInfo
+				titleInfo
 			-->
 			<xsl:apply-templates select="doc:metadata/doc:element[@name='dc']/doc:element[@name='title']">
 				<xsl:with-param name="paraNonSort">
@@ -18,7 +18,7 @@
 				</xsl:with-param>
 			</xsl:apply-templates>
 			<!-- 
-				mods:name
+				name
 			-->
 			<xsl:apply-templates select="doc:metadata/doc:element[@name='mods']/doc:element[@name='name']/doc:element[@name='artist']"/>
 			<xsl:apply-templates select="doc:metadata/doc:element[@name='mods']/doc:element[@name='name']/doc:element[@name='collector']"/>
@@ -29,111 +29,111 @@
 			<xsl:apply-templates select="doc:metadata/doc:element[@name='dc']/doc:element[@name='contributor']"/>	
 			
 			<!-- 
-				mods:typeOfResource
+				typeOfResource
 			-->
 				<xsl:apply-templates select="doc:metadata/doc:element[@name='dc']/doc:element[@name='type']"/>
 			<!-- 
-				mods:genre
+				genre
 			-->
 			<xsl:apply-templates select="doc:metadata/doc:element[@name='mods']/doc:element[@name='genre']"/>
 			<!-- 
-				mods:originInfo TO DO
+				originInfo TO DO
 			-->
 			<xsl:call-template name="createOrigin"/>
 			<!--
-				mods:language
+				language
 			-->
 			<xsl:apply-templates select="doc:metadata/doc:element[@name='mods']/doc:element[@name='language']"/>
 			<!-- 
-				mods:physicalDescription
+				physicalDescription
 			-->
 			<xsl:call-template name="physicalDescription"/>
 			<!-- 
-				mods:abstract
+				abstract
 			-->
 			<xsl:apply-templates select="doc:metadata/doc:element[@name='dc']/doc:element[@name='description']/doc:element[@name='abstract']"/>
 			<!-- 
-				mods:tableOfContents - not currently used
+				tableOfContents - not currently used
 			-->
 			<!-- 
-				mods:targetAudience - not currently used
+				targetAudience - not currently used
 			-->
 			<!-- 
 				mod:note
 			-->
 			<xsl:apply-templates select="doc:metadata/doc:element[@name='mods']/doc:element[@name='note']"/>
 			<!-- 
-				mods:subject
+				subject
 			-->
 			<xsl:apply-templates select="doc:metadata/doc:element[@name='dc']/doc:element[@name='subject']"/>
 			<!-- 
-				mods:geographic  
+				geographic  
 			-->
 			<xsl:apply-templates select="doc:metadata/doc:element[@name='mods']/doc:element[@name='subject']/doc:element[@name='geographic']"/>
 			<!-- 
-				mods:hierarchicalGeographic
+				hierarchicalGeographic
 			-->
 			<xsl:apply-templates select="doc:metadata/doc:element[@name='dc']/doc:element[@name='coverage']"/>
 			<!-- 
-				mods:geographic  
+				geographic  
 			-->
 			<xsl:apply-templates select="doc:metadata/doc:element[@name='mods']/doc:element[@name='subject']/doc:element[@name='geographic']"/>
 			<!-- 
-				mods:classification - not currently used
+				classification - not currently used
 			-->
 			<!-- 
-				mods:relatedItem
+				relatedItem
 			-->
 			<xsl:apply-templates select="doc:metadata/doc:element[@name='dc']/doc:element[@name='relation']/doc:element[@name='ispartofseries']"/>
 			<xsl:apply-templates select="doc:metadata/doc:element[@name='dc']/doc:element[@name='relation']/doc:element[@name='isreferencedby']"/>
 			<!-- 
-				mods:identifier
+				identifier
 			-->
 			<xsl:apply-templates select="doc:metadata/doc:element[@name='dc']/doc:element[@name='identifier']"/>
 			<!--
-				mods:location 
+				location 
 			-->
 			<xsl:call-template name="createLocation"/>
 			<!-- 
-				mods:accessCondition
+				accessCondition
 			-->
 			<xsl:apply-templates select="doc:metadata/doc:element[@name='dc']/doc:element[@name='rights']"/>
 			<xsl:apply-templates select="doc:metadata/doc:element[@name='dc']/doc:element/doc:element[@name='license']"/>
 			<!-- 
-				mods:part - not currently used
+				part - not currently used
 			-->
 			<!-- 
-				mods:extension
+				extension
 			-->
 			<xsl:call-template name="createExtension"/>
 			<!-- 
-				mods:recordInfo
+				recordInfo
 			-->	   
-			<xsl:element name="mods:recordInfo">
-				<xsl:element name="mods:recordContentSource">
+			<xsl:element name="recordInfo">
+				<xsl:element name="recordContentSource">
 					<xsl:text>Brandeis University Library</xsl:text>
 				</xsl:element>
 			</xsl:element>
-		</mods:mods>
+		</mods>
 	</xsl:template>
 	<!-- 
-	mods:titleInfo
+	titleInfo
 	-->
 	<xsl:template match="doc:element[@name='title']">
 		<xsl:param name="paraNonSort"/>
-		<xsl:element name="mods:titleInfo">
+		<xsl:element name="titleInfo">
 			<xsl:attribute name="usage">primary</xsl:attribute>
 			<xsl:choose>
 				<xsl:when test="$paraNonSort !=''">
-					<xsl:element name="mods:nonSort">
+					<xsl:element name="nonSort">
 						<xsl:value-of select="$paraNonSort"/>
 					</xsl:element>
-					<xsl:element name="mods:title">
+					<xsl:element name="title">
 						<xsl:value-of select="normalize-space(substring(doc:element/doc:field,string-length($paraNonSort)+2))"/>
 					</xsl:element>
 				</xsl:when>
 				<xsl:otherwise>
-					<xsl:element name="mods:title">
+					<xsl:element name="title">
 						<xsl:value-of select="normalize-space(doc:element/doc:field)"/>
 					</xsl:element>
 				</xsl:otherwise>
@@ -141,18 +141,18 @@
 		</xsl:element>
 	</xsl:template>
 	<!-- 
-		mods:name
+		name
 	-->
 	<xsl:template match="doc:element[@name='artist']">
-		<xsl:element name="mods:name">
+		<xsl:element name="name">
 			<xsl:attribute name="type">personal</xsl:attribute>
 			<xsl:for-each select="doc:element/doc:field">
-				<xsl:element name="mods:namePart">
+				<xsl:element name="namePart">
 					<xsl:value-of select="."/>
 				</xsl:element>
 			</xsl:for-each>
-			<xsl:element name="mods:role">
-				<xsl:element name="mods:roleTerm">
+			<xsl:element name="role">
+				<xsl:element name="roleTerm">
 					<xsl:attribute name="authority">marcrelator</xsl:attribute>
 					<xsl:attribute name="authorityURI">http://id.loc.gov/vocabulary/relators</xsl:attribute>
 					<xsl:attribute name="type">text</xsl:attribute>
@@ -163,15 +163,15 @@
 		</xsl:element>
 	</xsl:template>
 	<xsl:template match="doc:element[@name='collector']">
-		<xsl:element name="mods:name">
+		<xsl:element name="name">
 			<xsl:attribute name="type">personal</xsl:attribute>
 			<xsl:for-each select="doc:element/doc:field">
-				<xsl:element name="mods:namePart">
+				<xsl:element name="namePart">
 					<xsl:value-of select="."/>
 				</xsl:element>
 			</xsl:for-each>
-			<xsl:element name="mods:role">
-				<xsl:element name="mods:roleTerm">
+			<xsl:element name="role">
+				<xsl:element name="roleTerm">
 					<xsl:attribute name="authority">marcrelator</xsl:attribute>
 					<xsl:attribute name="authorityURI">http://id.loc.gov/vocabulary/relators</xsl:attribute>
 					<xsl:attribute name="type">text</xsl:attribute>
@@ -182,15 +182,15 @@
 		</xsl:element>
 	</xsl:template>
 	<xsl:template match="doc:element[@name='donor']">
-		<xsl:element name="mods:name">
+		<xsl:element name="name">
 			<xsl:attribute name="type">personal</xsl:attribute>
 			<xsl:for-each select="doc:element/doc:field">
-				<xsl:element name="mods:namePart">
+				<xsl:element name="namePart">
 					<xsl:value-of select="."/>
 				</xsl:element>
 			</xsl:for-each>
-			<xsl:element name="mods:role">
-				<xsl:element name="mods:roleTerm">
+			<xsl:element name="role">
+				<xsl:element name="roleTerm">
 					<xsl:attribute name="authority">marcrelator</xsl:attribute>
 					<xsl:attribute name="authorityURI">http://id.loc.gov/vocabulary/relators</xsl:attribute>
 					<xsl:attribute name="type">text</xsl:attribute>
@@ -201,19 +201,19 @@
 		</xsl:element>
 	</xsl:template>
 	<xsl:template match="doc:element[@name='lithographer']">
-		<xsl:element name="mods:name">
+		<xsl:element name="name">
 			<xsl:attribute name="type">personal</xsl:attribute>
-			<xsl:element name="mods:namePart">
+			<xsl:element name="namePart">
 				<xsl:value-of select="doc:element/doc:field"/>
 			</xsl:element>
 			<xsl:if test="../doc:element[@name='datepart']">
-				<xsl:element name="mods:namePart">
+				<xsl:element name="namePart">
 					<xsl:attribute name="type">date</xsl:attribute>
 					<xsl:value-of select="../doc:element[@name='datepart']"/>
 				</xsl:element>
 			</xsl:if>
-			<xsl:element name="mods:role">
-				<xsl:element name="mods:roleTerm">
+			<xsl:element name="role">
+				<xsl:element name="roleTerm">
 					<xsl:attribute name="authority">marcrelator</xsl:attribute>
 						<xsl:attribute name="authorityURI">http://id.loc.gov/vocabulary/relators</xsl:attribute>
 					<xsl:attribute name="type">text</xsl:attribute>
@@ -224,19 +224,19 @@
 		</xsl:element>
 	</xsl:template>
 	<xsl:template match="doc:element[@name='photo']">
-		<xsl:element name="mods:name">
+		<xsl:element name="name">
 			<xsl:attribute name="type">personal</xsl:attribute>
-			<xsl:element name="mods:namePart">
+			<xsl:element name="namePart">
 				<xsl:value-of select="doc:element/doc:field"/>
 			</xsl:element>
 			<xsl:if test="../doc:element[@name='datepart']">
-				<xsl:element name="mods:namePart">
+				<xsl:element name="namePart">
 					<xsl:attribute name="type">date</xsl:attribute>
 					<xsl:value-of select="../doc:element[@name='datepart']"/>
 				</xsl:element>
 			</xsl:if>
-			<xsl:element name="mods:role">
-				<xsl:element name="mods:roleTerm">
+			<xsl:element name="role">
+				<xsl:element name="roleTerm">
 					<xsl:attribute name="authority">marcrelator</xsl:attribute>
 					<xsl:attribute name="authorityURI">http://id.loc.gov/vocabulary/relators</xsl:attribute>
 					<xsl:attribute name="type">text</xsl:attribute>
@@ -247,19 +247,19 @@
 		</xsl:element>
 	</xsl:template>
 	<xsl:template match="doc:element[@name='sponsor']">
-		<xsl:element name="mods:name">
+		<xsl:element name="name">
 			<xsl:attribute name="type">corporate</xsl:attribute>
-			<xsl:element name="mods:namePart">
+			<xsl:element name="namePart">
 				<xsl:value-of select="doc:element/doc:field"/>
 			</xsl:element>
 			<xsl:if test="../doc:element[@name='datepart']">
-				<xsl:element name="mods:namePart">
+				<xsl:element name="namePart">
 					<xsl:attribute name="type">date</xsl:attribute>
 					<xsl:value-of select="../doc:element[@name='datepart']"/>
 				</xsl:element>
 			</xsl:if>
-			<xsl:element name="mods:role">
-				<xsl:element name="mods:roleTerm">
+			<xsl:element name="role">
+				<xsl:element name="roleTerm">
 					<xsl:attribute name="authority">marcrelator</xsl:attribute>
 					<xsl:attribute name="authorityURI">http://id.loc.gov/vocabulary/relators</xsl:attribute>
 					<xsl:attribute name="type">text</xsl:attribute>
@@ -273,10 +273,10 @@
 		<xsl:for-each select="doc:element">
 			<xsl:choose>
 				<xsl:when test="@name='interviewee'">
-					<xsl:element name="mods:name">
+					<xsl:element name="name">
 						<xsl:attribute name="type">personal</xsl:attribute>
-						<xsl:element name="mods:role">
-							<xsl:element name="mods:roleTerm">
+						<xsl:element name="role">
+							<xsl:element name="roleTerm">
 								<xsl:attribute name="authority">marcrelator</xsl:attribute>
 								<xsl:attribute name="authorityURI">http://id.loc.gov/vocabulary/relators</xsl:attribute>
 								<xsl:attribute name="type">text</xsl:attribute>
@@ -285,17 +285,17 @@
 							</xsl:element>
 						</xsl:element>
 						<xsl:for-each select="doc:element/doc:field">
-							<xsl:element name="mods:namePart">
+							<xsl:element name="namePart">
 								<xsl:value-of select="."/>
 							</xsl:element>
 						</xsl:for-each>
 					</xsl:element>
 				</xsl:when>
 				<xsl:when test="@name='interviewer'">
-					<xsl:element name="mods:name">
+					<xsl:element name="name">
 						<xsl:attribute name="type">personal</xsl:attribute>
-						<xsl:element name="mods:role">
-							<xsl:element name="mods:roleTerm">
+						<xsl:element name="role">
+							<xsl:element name="roleTerm">
 								<xsl:attribute name="authority">marcrelator</xsl:attribute>
 								<xsl:attribute name="authorityURI">http://id.loc.gov/vocabulary/relators</xsl:attribute>
 								<xsl:attribute name="type">text</xsl:attribute>
@@ -304,7 +304,7 @@
 							</xsl:element>
 						</xsl:element>
 						<xsl:for-each select="doc:element/doc:field">
-							<xsl:element name="mods:namePart">
+							<xsl:element name="namePart">
 								<xsl:value-of select="."/>
 							</xsl:element>
 						</xsl:for-each>						
@@ -314,18 +314,18 @@
 		</xsl:for-each>
 	</xsl:template>
 	<!-- 
-		mods:typeOfResource
+		typeOfResource
 	-->
 	<xsl:template match="doc:element[@name='type']">
-		<xsl:element name="mods:typeOfResource">
+		<xsl:element name="typeOfResource">
 			<xsl:value-of select="doc:element/doc:field"/>
 		</xsl:element>
 	</xsl:template>
 	<!-- 
-		mods:genre
+		genre
 	-->
 	<xsl:template match="doc:element[@name='genre']">
-		<xsl:element name="mods:genre">
+		<xsl:element name="genre">
 			<xsl:variable name="varAuth"/>
 			<xsl:variable name="varURI"/>
 			<xsl:choose>
@@ -447,10 +447,10 @@
 		<xsl:value-of select="doc:element/doc:field[@name='value']"/>
 	</xsl:template>
 	<!-- 
-		mods:originInfo 
+		originInfo 
 	-->
 	<xsl:template name="createOrigin">
-		<xsl:element name="mods:originInfo">
+		<xsl:element name="originInfo">
 			<xsl:apply-templates select="/doc:metadata/doc:element[@name='mods']/doc:element[@name='publisher']"/>
 	                <xsl:apply-templates select="/doc:metadata/doc:element[@name='mods']/doc:element[@name='date']/doc:element[@name='keydate']"/>
 	                <xsl:apply-templates select="/doc:metadata/doc:element[@name='mods']/doc:element[@name='date']/doc:element[@name='nonkey']"/>
@@ -458,8 +458,8 @@
 	</xsl:template>
 	<xsl:template match="doc:element[@name='publisher']">
 		<xsl:if test="doc:element[@name='place']">
-			<xsl:element name="mods:place">
-				<xsl:element name="mods:placeTerm">
+			<xsl:element name="place">
+				<xsl:element name="placeTerm">
 					<xsl:attribute name="type">
 						<xsl:text>text</xsl:text>
 					</xsl:attribute>
@@ -468,7 +468,7 @@
 			</xsl:element>
 		</xsl:if>
 		<xsl:if test="doc:element[@name='name']">
-			<xsl:element name="mods:publisher">
+			<xsl:element name="publisher">
 				<xsl:value-of select="doc:element[@name='name']/doc:element/doc:field"/>
 			</xsl:element>
 		</xsl:if>
@@ -478,33 +478,33 @@
 		<xsl:variable name="varTest" select="translate($varRaw, '0123456789', '##########')"/>
 		<xsl:choose>
 			<xsl:when test="($varTest = '####-##-##' or $varTest = '####-##' or $varTest = '####')">
-				<xsl:element name="mods:dateIssued">
+				<xsl:element name="dateIssued">
 					<xsl:attribute name="encoding">w3cdtf</xsl:attribute>
 					<xsl:attribute name="keyDate">yes</xsl:attribute>
 					<xsl:value-of select="$varRaw"/>
 				</xsl:element>
 			</xsl:when>
 			<xsl:when test="$varTest = '####-####'">
-				<xsl:element name="mods:dateIssued">
+				<xsl:element name="dateIssued">
 					<xsl:attribute name="encoding">w3cdtf</xsl:attribute>
 					<xsl:attribute name="keyDate">yes</xsl:attribute>
 					<xsl:attribute name="point">start</xsl:attribute>
 					<xsl:value-of select="substring-before($varRaw, '-')"/>
 				</xsl:element>
-				<xsl:element name="mods:dateIssued">
+				<xsl:element name="dateIssued">
 					<xsl:attribute name="encoding">w3cdtf</xsl:attribute>
 					<xsl:attribute name="point">end</xsl:attribute>
 					<xsl:value-of select="substring-after($varRaw, '-')"/>
 				</xsl:element>
 			</xsl:when>
 			<xsl:when test="$varTest = '####-####?'">
-				<xsl:element name="mods:dateIssued">
+				<xsl:element name="dateIssued">
 					<xsl:attribute name="encoding">w3cdtf</xsl:attribute>
 					<xsl:attribute name="keyDate">yes</xsl:attribute>
 					<xsl:attribute name="point">start</xsl:attribute>
 					<xsl:value-of select="substring-before($varRaw, '-')"/>
 				</xsl:element>
-				<xsl:element name="mods:dateIssued">
+				<xsl:element name="dateIssued">
 					<xsl:attribute name="encoding">w3cdtf</xsl:attribute>
 					<xsl:attribute name="point">end</xsl:attribute>
 					<xsl:attribute name="qualifier">questionable</xsl:attribute>
@@ -513,7 +513,7 @@
 			</xsl:when>
 			<xsl:when
 				test="($varTest = '####-##-##?' or $varTest = '####-##?' or $varTest = '####?')">
-				<xsl:element name="mods:dateIssued">
+				<xsl:element name="dateIssued">
 					<xsl:attribute name="encoding">w3cdtf</xsl:attribute>
 					<xsl:attribute name="keyDate">yes</xsl:attribute>
 					<xsl:attribute name="qualifier">questionable</xsl:attribute>
@@ -521,7 +521,7 @@
 				</xsl:element>
 			</xsl:when>
 			<xsl:when test="$varTest = '[####]'">
-				<xsl:element name="mods:dateIssued">
+				<xsl:element name="dateIssued">
 					<xsl:attribute name="encoding">w3cdtf</xsl:attribute>
 					<xsl:attribute name="keyDate">yes</xsl:attribute>
 					<xsl:attribute name="qualifier">inferred</xsl:attribute>
@@ -529,14 +529,14 @@
 				</xsl:element>
 			</xsl:when>
 			<xsl:when test="$varTest = '[####-####]'">
-				<xsl:element name="mods:dateIssued">
+				<xsl:element name="dateIssued">
 					<xsl:attribute name="encoding">w3cdtf</xsl:attribute>
 					<xsl:attribute name="keyDate">yes</xsl:attribute>
 					<xsl:attribute name="point">start</xsl:attribute>
 					<xsl:attribute name="qualifier">inferred</xsl:attribute>
 					<xsl:value-of select="translate(substring-before($varRaw, '-'), '[', '')"/>
 				</xsl:element>
-				<xsl:element name="mods:dateIssued">
+				<xsl:element name="dateIssued">
 					<xsl:attribute name="encoding">w3cdtf</xsl:attribute>
 					<xsl:attribute name="point">end</xsl:attribute>
 					<xsl:attribute name="qualifier">inferred</xsl:attribute>
@@ -544,7 +544,7 @@
 				</xsl:element>
 			</xsl:when>
 			<xsl:when test="$varTest = 'circa ####'">
-				<xsl:element name="mods:dateIssued">
+				<xsl:element name="dateIssued">
 					<xsl:attribute name="encoding">w3cdtf</xsl:attribute>
 					<xsl:attribute name="keyDate">yes</xsl:attribute>
 					<xsl:attribute name="qualifier">approximate</xsl:attribute>
@@ -558,25 +558,25 @@
 		<xsl:variable name="varTest" select="translate($varRaw, '0123456789', '##########')"/>
 		<xsl:choose>
 			<xsl:when test="($varTest = '####-##-##' or $varTest = '####-##' or $varTest = '####')">
-				<xsl:element name="mods:dateIssued">
+				<xsl:element name="dateIssued">
 					<xsl:attribute name="encoding">w3cdtf</xsl:attribute>
 					<xsl:value-of select="$varRaw"/>
 				</xsl:element>
 			</xsl:when>
 			<xsl:when test="$varTest = '####-####'">
-				<xsl:element name="mods:dateIssued">
+				<xsl:element name="dateIssued">
 					<xsl:attribute name="encoding">w3cdtf</xsl:attribute>
 					<xsl:attribute name="point">start</xsl:attribute>
 					<xsl:value-of select="substring-before($varRaw, '-')"/>
 				</xsl:element>
-				<xsl:element name="mods:dateIssued">
+				<xsl:element name="dateIssued">
 					<xsl:attribute name="encoding">w3cdtf</xsl:attribute>
 					<xsl:attribute name="point">end</xsl:attribute>
 					<xsl:value-of select="substring-after($varRaw, '-')"/>
 				</xsl:element>
 			</xsl:when>
 			<xsl:when test="$varTest = '####-##-##?'">
-				<xsl:element name="mods:dateIssued">
+				<xsl:element name="dateIssued">
 					<xsl:attribute name="encoding">w3cdtf</xsl:attribute>
 					<xsl:attribute name="qualifier">questionable</xsl:attribute>
 					<xsl:value-of select="translate($varRaw, '?', '')"/>
@@ -585,17 +585,17 @@
 		</xsl:choose>
 	</xsl:template>	
 	<!-- 
-		mods:language
+		language
 	-->
 	<xsl:template match="doc:element[@name='language']">
-		<xsl:element name="mods:language">
-			<xsl:element name="mods:languageTerm">
+		<xsl:element name="language">
+			<xsl:element name="languageTerm">
 				<xsl:attribute name="authority">iso639-2b</xsl:attribute>
 				<xsl:attribute name="authorityURI">http://id.loc.gov/vocabulary/iso639-2</xsl:attribute>
 				<xsl:attribute name="type">text</xsl:attribute>
 				<xsl:value-of select="normalize-space(substring-before(.,'|'))"/>
 			</xsl:element>
-			<xsl:element name="mods:languageTerm">
+			<xsl:element name="languageTerm">
 				<xsl:attribute name="authority">iso639-2b</xsl:attribute>
 				<xsl:attribute name="authorityURI">http://id.loc.gov/vocabulary/iso639-2</xsl:attribute>
 				<xsl:attribute name="type">code</xsl:attribute>
@@ -604,34 +604,34 @@
 		</xsl:element>
 	</xsl:template>
 	<!-- 
-		mods:physicalDescription
+		physicalDescription
 	-->
 	<xsl:template name="physicalDescription">
-		<xsl:element name="mods:physicalDescription">
-			<xsl:element name="mods:digitalOrigin">reformatted digital</xsl:element>
-			<xsl:element name="mods:internetMediaType">
+		<xsl:element name="physicalDescription">
+			<xsl:element name="digitalOrigin">reformatted digital</xsl:element>
+			<xsl:element name="internetMediaType">
 				<xsl:value-of select="doc:metadata/doc:element[@name='bundles']/doc:element[@name='bundle'][doc:field[text()='ORIGINAL']]/doc:element/doc:element[1]/doc:field[@name='format']"/>
 			</xsl:element>
-			<xsl:element name="mods:extent">
+			<xsl:element name="extent">
 				<xsl:value-of select="doc:metadata/doc:element[@name='mods']/doc:element[@name='extent']/doc:element/doc:field"/>
 			</xsl:element>
 		</xsl:element>
 	</xsl:template>
 	
 	<!-- 
-		mods:abstract
+		abstract
 	-->
 	<xsl:template match="doc:element[@name='abstract']">
-		<xsl:element name="mods:abstract">
+		<xsl:element name="abstract">
 			<xsl:value-of select="doc:element/doc:field"/>
 		</xsl:element>
 	</xsl:template>
 	<!-- 
-		mods:note
+		note
 	-->
 	<xsl:template match="doc:element[@name='note']">
 		<xsl:for-each select="doc:element">
-			<xsl:element name="mods:note">
+			<xsl:element name="note">
 				<xsl:attribute name="type">
 					<xsl:value-of select="@name"/>
 				</xsl:attribute>
@@ -647,28 +647,28 @@
 			<xsl:choose>
 				<xsl:when test="@name='other'">
 					<xsl:for-each select="doc:element/doc:field[@name='value']">
-						<mods:subject>
-							<xsl:element name="mods:topic">
+						<subject>
+							<xsl:element name="topic">
 								<xsl:value-of select="."/>
 							</xsl:element>
-						</mods:subject>
+						</subject>
 					</xsl:for-each>
 				</xsl:when>
 				<xsl:when test="@name='none'">
 					<xsl:for-each select="doc:field[@name='value']">
-						<mods:subject>
-							<xsl:element name="mods:topic">
+						<subject>
+							<xsl:element name="topic">
 								<xsl:value-of select="."/>
 							</xsl:element>
-						</mods:subject>
+						</subject>
 					</xsl:for-each>
 				</xsl:when>
 				<xsl:when test="@name='lcsh'">
 					<xsl:for-each select="doc:element/doc:field[@name='value']">
-						<xsl:element name="mods:subject">
+						<xsl:element name="subject">
 							<xsl:attribute name="authority">lcsh</xsl:attribute>
 							<xsl:attribute name="authorityURI">http://id.loc.gov/authorities/subjects</xsl:attribute>
-							<xsl:element name="mods:topic">
+							<xsl:element name="topic">
 								<xsl:value-of select="."/>
 							</xsl:element>
 						</xsl:element>
@@ -676,10 +676,10 @@
 				</xsl:when>
 				<xsl:when test="@name='lcnaf'">
 					<xsl:for-each select="doc:element/doc:field[@name='value']">
-						<xsl:element name="mods:subject">
+						<xsl:element name="subject">
 							<xsl:attribute name="authority">lcnaf</xsl:attribute>
 							<xsl:attribute name="authorityURI">http://id.loc.gov/authorities/names</xsl:attribute>
-							<xsl:element name="mods:topic">
+							<xsl:element name="topic">
 								<xsl:value-of select="."/>
 							</xsl:element>
 						</xsl:element>
@@ -687,10 +687,10 @@
 				</xsl:when>
 				<xsl:when test="@name='aat'">
 					<xsl:for-each select="doc:element/doc:field[@name='value']">
-						<xsl:element name="mods:subject">
+						<xsl:element name="subject">
 							<xsl:attribute name="authority">aat</xsl:attribute>
 							<xsl:attribute name="authorityURI">http://vocab.getty.edu/page/aat/300198841</xsl:attribute>
-							<xsl:element name="mods:topic">
+							<xsl:element name="topic">
 								<xsl:value-of select="."/>
 							</xsl:element>
 						</xsl:element>
@@ -700,65 +700,65 @@
 		</xsl:for-each>
 	</xsl:template>
 	<!-- 
-		mods:hierarchicalGeographic
+		hierarchicalGeographic
 	-->
 	<xsl:template match="doc:element[@name='coverage']">
 		<xsl:variable name="varId">
 			<xsl:value-of select="doc:element/doc:field"/>
 		</xsl:variable>
-		<xsl:copy-of select="$tgnLookup/records/record[@Subject_ID=$varId]/mods:subject"/>
+		<xsl:copy-of select="$tgnLookup/records/record[@Subject_ID=$varId]/subject"/>
 	</xsl:template>
 	<!-- 
-		mods:geographic
+		geographic
 	-->
 	<xsl:template match="doc:element[@name='geographic']">
-		<xsl:element name="mods:subject">
-			<xsl:element name="mods:geographic">
+		<xsl:element name="subject">
+			<xsl:element name="geographic">
 				<xsl:value-of select="doc:element/doc:field"/>
 			</xsl:element>
 		</xsl:element>
 	</xsl:template>
 	<!-- 
-		mods:relatedItem[s]
+		relatedItem[s]
 	-->
 	<xsl:template match="doc:element[@name='ispartof']">
-		<xsl:element name="mods:relatedItem">
+		<xsl:element name="relatedItem">
 			<xsl:attribute name="type">host</xsl:attribute>
-			<xsl:element name="mods:titleInfo">
-				<xsl:element name="mods:title">
+			<xsl:element name="titleInfo">
+				<xsl:element name="title">
 					<xsl:value-of select="doc:element/doc:field"/>
 				</xsl:element>
 			</xsl:element>
 		</xsl:element>
 	</xsl:template>
 	<xsl:template match="doc:element[@name='ispartofseries']">
-		<xsl:element name="mods:relatedItem">
+		<xsl:element name="relatedItem">
 			<xsl:attribute name="type">host</xsl:attribute>
-			<xsl:element name="mods:titleInfo">
-				<xsl:element name="mods:title">
+			<xsl:element name="titleInfo">
+				<xsl:element name="title">
 					<xsl:value-of select="doc:element/doc:field"/>
 				</xsl:element>
 			</xsl:element>
 		</xsl:element>
 	</xsl:template>
 	<xsl:template match="doc:element[@name='isreferencedby']">
-		<xsl:element name="mods:relatedItem">
+		<xsl:element name="relatedItem">
 			<xsl:attribute name="type">isReferencedBy</xsl:attribute>
-			<xsl:element name="mods:titleInfo">
-				<xsl:element name="mods:title">
+			<xsl:element name="titleInfo">
+				<xsl:element name="title">
 					<xsl:value-of select="doc:element/doc:field"/>
 				</xsl:element>
 			</xsl:element>
 		</xsl:element>
 	</xsl:template>
 	<!-- 
-		mods:identifier
+		identifier
 	-->
 	<xsl:template match="doc:element[@name='identifier']">
 		<xsl:for-each select="doc:element">
 			<xsl:choose>
 				<xsl:when test="@name='other'">
-					<xsl:element name="mods:identifier">
+					<xsl:element name="identifier">
 						<xsl:attribute name="type">
 							<xsl:text>other</xsl:text>
 						</xsl:attribute>
@@ -766,7 +766,7 @@
 					</xsl:element>
 				</xsl:when>
 				<xsl:when test="@name='uri'">
-					<xsl:element name="mods:identifier">
+					<xsl:element name="identifier">
 						<xsl:attribute name="type">
 							<xsl:text>hdl</xsl:text>
 						</xsl:attribute>
@@ -777,16 +777,16 @@
 		</xsl:for-each>
 	</xsl:template>
 	<!--
-		mods:location
+		location
 	-->
 	<xsl:template name="createLocation">
-		<xsl:element name="mods:location">
-			<xsl:element name="mods:physicalLocation">
+		<xsl:element name="location">
+			<xsl:element name="physicalLocation">
 				<xsl:text>Brandeis University Library</xsl:text>
 			</xsl:element>
 		</xsl:element>
-		<xsl:element name="mods:location">
-			<xsl:element name="mods:url">
+		<xsl:element name="location">
+			<xsl:element name="url">
 				<xsl:attribute name="access">
 					<xsl:text>object in context</xsl:text>
 				</xsl:attribute>
@@ -796,8 +796,8 @@
 				<xsl:value-of select="concat('https://hdl.handle.net/',/doc:metadata/doc:element[@name='others']/doc:field[@name='handle'])"/>
 			</xsl:element>
 		</xsl:element>
-		<xsl:element name="mods:location">
-	        	<xsl:element name="mods:url">
+		<xsl:element name="location">
+	        	<xsl:element name="url">
 	       			<xsl:attribute name="displayLabel">
 					<xsl:value-of select="/doc:metadata/doc:element[@name='dc']/doc:element[@name='title']/doc:element/doc:field"/>
 	        		</xsl:attribute>
@@ -806,10 +806,10 @@
 		</xsl:element>
 	</xsl:template>
 	<!-- 
-		mods:accessCondition
+		accessCondition
 	-->
 	<xsl:template match="doc:element[@name='rights']">
-		<xsl:element name="mods:accessCondition">
+		<xsl:element name="accessCondition">
 			<xsl:attribute name="displayLabel">rights</xsl:attribute>
 			<xsl:attribute name="type">use and reproduction</xsl:attribute>
 			<xsl:for-each select="doc:element/doc:field">
@@ -818,19 +818,18 @@
 		</xsl:element>
 	</xsl:template>
 	<xsl:template match="doc:element[@name='license']">
-		<xsl:element name="mods:accessCondition">
+		<xsl:element name="accessCondition">
 			<xsl:attribute name="displayLabel">license</xsl:attribute>
 			<xsl:attribute name="type">use and reproduction</xsl:attribute>
 			<xsl:value-of select="normalize-space(doc:element/doc:field)"/>
 		</xsl:element>
 	</xsl:template>
 	<!-- 
-		mods:extension
+		extension
 	-->
 	<xsl:template name="createExtension">
-		<xsl:element name="mods:extension">
-			<metadata xmlns="http://www.lyncode.com/xoai" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-				xsi:schemaLocation="http://www.lyncode.com/xoai http://www.lyncode.com/xsd/xoai.xsd">
+		<xsl:element name="extension">
+			<metadata xmlns="http://www.lyncode.com/xoai">
 				<xsl:element name="events">
 					<xsl:for-each select="/doc:metadata/doc:element[@name='dc']/doc:element/doc:element[@name='provenance']/doc:element/doc:field">
 						<xsl:element name="event">
@@ -855,8 +854,7 @@
 		</xsl:element>
 	</xsl:template>
 	<!-- 
-		mods:recordInfo - static
+		recordInfo - static
 	-->
 	<xsl:template match="text()"/>
 </xsl:stylesheet>
-
