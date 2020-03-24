@@ -590,20 +590,16 @@
 	<xsl:template match="doc:element[@name='language']">
 		<xsl:element name="mods:language">
 			<xsl:element name="mods:languageTerm">
-				<xsl:element name="mods:languageTerm">
-					<xsl:attribute name="authority">iso639-2b</xsl:attribute>
-					<xsl:attribute name="authorityURI">http://id.loc.gov/vocabulary/iso639-2</xsl:attribute>
-					<xsl:attribute name="type">text</xsl:attribute>
-					<xsl:value-of select="normalize-space(substring-before(.,'|'))"/>
-				</xsl:element>
+				<xsl:attribute name="authority">iso639-2b</xsl:attribute>
+				<xsl:attribute name="authorityURI">http://id.loc.gov/vocabulary/iso639-2</xsl:attribute>
+				<xsl:attribute name="type">text</xsl:attribute>
+				<xsl:value-of select="normalize-space(substring-before(.,'|'))"/>
 			</xsl:element>
 			<xsl:element name="mods:languageTerm">
-				<xsl:element name="mods:languageTerm">
-					<xsl:attribute name="authority">iso639-2b</xsl:attribute>
-					<xsl:attribute name="authorityURI">http://id.loc.gov/vocabulary/iso639-2</xsl:attribute>
-					<xsl:attribute name="type">code</xsl:attribute>
-					<xsl:value-of select="normalize-space(substring-after(.,'|'))"/>
-				</xsl:element>
+				<xsl:attribute name="authority">iso639-2b</xsl:attribute>
+				<xsl:attribute name="authorityURI">http://id.loc.gov/vocabulary/iso639-2</xsl:attribute>
+				<xsl:attribute name="type">code</xsl:attribute>
+				<xsl:value-of select="normalize-space(substring-after(.,'|'))"/>				</xsl:element>
 			</xsl:element>
 		</xsl:element>
 	</xsl:template>
