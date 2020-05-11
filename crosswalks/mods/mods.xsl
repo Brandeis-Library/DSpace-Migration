@@ -434,6 +434,12 @@
 						<xsl:with-param name="URI">tgm009874</xsl:with-param>
 					</xsl:call-template>
 				</xsl:when>
+				<xsl:when test="doc:element/doc:field[@name='value'] = 'Bookplates'">
+					<xsl:call-template name="createGenre">
+						<xsl:with-param name="Authority">gmgpc</xsl:with-param>
+						<xsl:with-param name="URI">tgm001220</xsl:with-param>
+					</xsl:call-template>
+				</xsl:when>
 			</xsl:choose>
 		</xsl:element>
 	</xsl:template>
